@@ -29,7 +29,7 @@ export default function Profile() {
       if (auth.currentUser.displayName !== name) {
         // update the display name
 
-        await updateProfile(auth, {
+        await updateProfile(auth.currentUser, {
           displayName: name,
         });
         // update name in the firestore
